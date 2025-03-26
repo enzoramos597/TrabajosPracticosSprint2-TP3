@@ -1,3 +1,6 @@
+//Define las funciones de presentación de datos.
+//Organiza la información de los superhéroes en un formato estructurado.
+
 export function renderizarSuperheroe(superheroe) {
     return {
         "id": superheroe._id,
@@ -8,8 +11,7 @@ export function renderizarSuperheroe(superheroe) {
         "Debilidad": superheroe.debilidad,
         "Poderes": superheroe.poderes,
         "Aliados": superheroe.aliados,
-        "Enemigos": superheroe.enemigos,
-        "Creador": superheroe.creador
+        "Enemigos": superheroe.enemigos
     };
 }
 

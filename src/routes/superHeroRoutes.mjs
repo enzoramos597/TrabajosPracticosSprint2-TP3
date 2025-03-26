@@ -1,11 +1,19 @@
+//Define las rutas necesarias para cada operación del controlador.
+
 import express from 'express';
-import {  obtenerSuperheroePorIdController, obtenerTodosLosSuperheroresController, buscarSuperheroesPorAtributoController, obtenerSuperheroresMayoresDe30Controller } from '../controllers/superheroesController.mjs';
+
+import {
+    obtenerSuperheroePorIdController,
+    obtenerTodosLosSuperheroesController,
+    buscarSuperheroesPorAtributoController,
+    obtenerSuperheroesMayoresDe30Controller
+} from '../controllers/superheroesController.mjs';
 
 const router = express.Router();
 
-router.get('/heroes', obtenerTodosLosSuperheroresController);
-router.get('/heroes/:id', obtenerSuperheroePorIdController);
+router.get('/heroes', obtenerTodosLosSuperheroesController);
+router.get('/heroes/buscarid/:id', obtenerSuperheroePorIdController);
 router.get('/heroes/buscar/:atributo/:valor', buscarSuperheroesPorAtributoController);
-router.get('/mayores-30', obtenerSuperheroresMayoresDe30Controller);
+router.get('/heroes/mayores-30', obtenerSuperheroesMayoresDe30Controller);
 
 export default router;
